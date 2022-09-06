@@ -26,14 +26,22 @@ class Matriz {
     }
 }
 // Exemplo rapaziada
-var NovaMatriz = new Matriz(2, 3, [10,20,30,40,50,60])
 // Aqui é uma nova matriz tudo no esquema
+var NovaMatriz = new Matriz(2, 3, [10,20,30,40,50,60])
+//
 
 // Aqui eu to procurando o valor da linha 2 coluna tres que deve ser 60 no exemplo ali
-console.log(a.getValue(2,3))
+console.log(NovaMatriz.getValue(2,3))
+//
 
 // Aqui eu to atribuindo a essa mesma posicao o valor 92
-a.setValue(2,3,92)
+NovaMatriz.setValue(2,3,92)
+//
 
 // Aqui eu to getando a mesma posicao, oq deve dar 92
-console.log(a.getValue(2,3))
+console.log(NovaMatriz.getValue(2,3))
+//
+
+// Aqui a matriz inteira
+console.log(NovaMatriz.matriz)
+//
