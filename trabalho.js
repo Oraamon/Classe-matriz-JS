@@ -45,3 +45,32 @@ console.log(NovaMatriz.getValue(2,3))
 // Aqui a matriz inteira
 console.log(NovaMatriz.matriz)
 //
+
+//Horácio
+class Vector {
+  constructor(dim, elements) {
+    this.dim = dim
+    this.elements = elements
+    this.vector = []
+    for (var i = 0; i < this.dim ; i++) {
+          this.vector.push(elements[i])
+  }
+  }
+  get(i){
+    this.i = i  
+    return this.vector[this.i-1]
+  }
+  set(i, value){
+    this.i = i
+    this.value = value
+    this.vector[this.i-1] = this.value
+  }
+}
+//Criar um vetor
+var NovoVetor = new Vector(5,[1,2,3,4,5])
+//Ver Vetor
+console.log(NovoVetor.vector)
+//Pegar Elemento dentro do vetor
+console.log(NovoVetor.get(3))
+//Alterar Elemento dentro do vetor
+console.log(NovoVetor.get(3))
