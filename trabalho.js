@@ -69,9 +69,10 @@ class Vector {
 //Criar um vetor
 var NovoVetor = new Vector(5,[1,2,3,4,5])
 //Ver Vetor
-console.log(NovoVetor.vector)
+console.log(NovoVetor.vector)//[1, 2, 3, 4, 5]
 //Pegar Elemento dentro do vetor
-console.log(NovoVetor.get(3))
+console.log(NovoVetor.get(3))//3
 //Alterar Elemento dentro do vetor
-NovoVetor.set(3,10)
-console.log(NovoVetor.get(3))
+NovoVetor.set(3,5)
+//Ver Vetor
+console.log(NovoVetor.vector)//[1, 2, 5, 4, 5]
