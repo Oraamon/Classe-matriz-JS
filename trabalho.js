@@ -47,23 +47,30 @@ console.log(NovaMatriz.matriz)
 //
 
 //Horácio
+
 class Vector {
   constructor(dim, elements) {
     this.dim = dim
     this.elements = elements
     this.vector = []
     for (var i = 0; i < this.dim ; i++) {
-          this.vector.push(elements[i])
+          this.vector.push([elements[i]])
   }
   }
   get(i){
     this.i = i  
-    return this.vector[this.i-1]
+    if(this.vector[this.i-1][0] != undefined)
+    return this.vector[this.i-1][0]
+    else
+    return this.vector[0][this.i-1]
   }
   set(i, value){
     this.i = i
-    this.value = value
+    this.value = [value]
+    if(this.vector[this.i-1][0] != undefined)
     this.vector[this.i-1] = this.value
+    else
+    this.vector[0][this.i-1] = this.value
   }
 }
 //Criar um vetor
@@ -76,6 +83,7 @@ console.log(NovoVetor.get(3))//3
 NovoVetor.set(3,5)
 //Ver Vetor
 console.log(NovoVetor.vector)//[1, 2, 5, 4, 5]
+
 
 class LinearAlgebra {
   sum(a, b) {
